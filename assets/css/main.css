@@ -18,6 +18,11 @@
   padding: 0;
 }
 
+/* keep the layout from shifting when a longer tab adds a scrollbar */
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   background: var(--bg);
   color: var(--text);
@@ -78,6 +83,11 @@ nav {
   color: #e63946;
 }
 
+.nav-link.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 /* Divider */
 .divider {
   border: none;
@@ -98,6 +108,41 @@ nav {
   font-weight: 700;
 }
 
+/* Sections: with js on, only the active one is shown */
+.js [data-section]:not(.active) {
+  display: none;
+}
+
+/* Projects */
+.project {
+  margin-bottom: 1.8rem;
+}
+
+.project-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.project-name {
+  font-weight: 700;
+}
+
+.project-meta {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.content .project p {
+  margin-bottom: 0.3rem;
+}
+
+.project-links {
+  font-size: 0.9rem;
+}
+
 /* Links in content */
 .link {
   text-decoration: none;
@@ -116,9 +161,8 @@ nav {
   color: #0077b5;
 }
 
-.contact-note {
-  color: var(--text-muted);
-  font-size: 0.9rem;
+.link.project-link {
+  color: #22aa44;
 }
 
 /* Footer */

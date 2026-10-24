@@ -4,6 +4,24 @@
   <meta charset="UTF-8" />
   <title>saad itani</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="saad itani. data, finance, and things i build.">
+  <meta property="og:title" content="saad itani">
+  <meta property="og:description" content="data, finance, and things i build.">
+  <meta property="og:url" content="https://saaditani.com">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- apply theme before first paint so dark mode doesn't flash -->
+  <script>
+    (function () {
+      var html = document.documentElement;
+      html.classList.add("js");
+      var theme = null;
+      try { theme = localStorage.getItem("theme"); } catch (e) {}
+      if (theme === "dark" || (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        html.setAttribute("data-theme", "dark");
+      }
+    })();
+  </script>
 
   <!-- Google font: Inconsolata -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,29 +45,53 @@
 
     <hr class="divider">
 
-    <section class="content">
+    <section class="content" data-section="about">
       <p>
-        hi! i'm <strong>saad</strong>. i like data & finance.
+        hi! i'm <strong>saad</strong>. i'm a computer science engineer with a
+        background in data.
       </p>
 
       <p>
-        i have a background in computer science engineering. currently exploring
-        the intersection of technology and financial markets.
+        i'm curious about how the world works, and pretty much everything in it.
+        i keep up with the news most days and go down rabbit holes easily, so i'm
+        usually happy to talk markets, ai, history, geopolitics, science, or
+        whatever niche topic comes up.
       </p>
 
       <p>
-        some things i like: chess, photography, building things, markets,
-        good coffee, and learning new stuff.
+        some things i like: chess, photography, building things, good coffee,
+        and learning new stuff.
+      </p>
+    </section>
+
+    <section class="content" data-section="projects">
+      <div class="project">
+        <div class="project-head">
+          <span class="project-name">risk engine</span>
+          <span class="project-meta">2026</span>
+        </div>
+        <p>
+          a terminal-style web app for portfolio risk. put in tickers and share
+          counts, and it pulls the market data and works out var, expected
+          shortfall, and which positions the risk is coming from.
+        </p>
+        <p class="project-links">
+          <a href="https://risk.saaditani.com" class="link project-link">live</a> ·
+          <a href="https://github.com/saad-itani/risk-engine" class="link project-link">code</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="content" data-section="contact">
+      <p>
+        the best way to reach me is email:<br>
+        saad [at] saaditani [dot] com
       </p>
 
       <p>
         here are some links to my internet things:<br>
         <a href="https://github.com/saad-itani" class="link github">github</a>,
         <a href="https://linkedin.com/in/saadallah-itani" class="link linkedin">linkedin</a>
-      </p>
-
-      <p class="contact-note">
-        you can reach me at saad [at] saaditani [dot] com
       </p>
     </section>
 
